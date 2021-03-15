@@ -130,9 +130,9 @@ var start = async (params) => {
   // })
 
   // 首页-签到有礼-免费抽-赢vivo x60
-  await scheduler.regTask('dailyNcow', async (request) => {
-    await require('./dailyNcow').doTask(request, options)
-  }, taskOption)
+  //await scheduler.regTask('dailyNcow', async (request) => {
+  //  await require('./dailyNcow').doTask(request, options)
+  //}, taskOption)
 
   // 首页-签到有礼-免费抽-拿红米笔记本-接元宝
   await scheduler.regTask('dailyIngots', async (request) => {
