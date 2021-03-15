@@ -90,7 +90,7 @@ let scheduler = {
             queues.push({
                 taskName: taskName,
                 taskState: 0,
-                willTime: willTime.format('YYYY-MM-DD 02:00:00'),
+                willTime: willTime.format('YYYY-MM-DD 00:00:00'),
                 waitTime: waitTime
             })
         }
