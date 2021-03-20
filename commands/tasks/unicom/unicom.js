@@ -374,23 +374,23 @@ var start = async (params) => {
 
   // 清理领取某些未知方式的积分
   // 该处理可能会导致某些活动任务机会不足导致错误，所以执行时间要迟
-  await scheduler.regTask('dailyOtherRewardVideo', async (request) => {
-    await require('./dailyOtherRewardVideo').cleanRewardVideo(request, options)
-  }, {
-    ...taskOption,
-    startTime: 21.5 * 3600,
-    ignoreRelay: true
-  })
+  //await scheduler.regTask('dailyOtherRewardVideo', async (request) => {
+  // await require('./dailyOtherRewardVideo').cleanRewardVideo(request, options)
+ // }, {
+ //   ...taskOption,
+ //   startTime: 21.5 * 3600,
+//    ignoreRelay: true
+//  })
 
   // 每日0点自动兑换流量
-  await scheduler.regTask('exchangeDFlow', async (request) => {
-    await require('./exchangeDFlow').doTask(request, options)
-  }, {
-    ...taskOption,
-    startTime: 0,
-    startHours: 0,
-    ignoreRelay: true
-  })
+//  await scheduler.regTask('exchangeDFlow', async (request) => {
+ //   await require('./exchangeDFlow').doTask(request, options)
+ // }, {
+//    ...taskOption,
+ //   startTime: 0,
+ //   startHours: 0,
+ //   ignoreRelay: true
+ // })
 
   // 定时检测流量兑换
   // 可使用 --exchangeDFlowCircle-intervalTime 1800 选项指定流量检查间隔时间，单位秒
